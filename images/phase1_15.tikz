@@ -1,0 +1,91 @@
+\begin{tikzpicture}[
+    every path/.style = {},
+    every node/.append style = {font=\sffamily}
+  ]    
+ % \begin{scope}[]         
+     
+    % liquid
+      \fill[%left 
+      color=green,% right color=green,
+      opacity=0.5]
+     (0,0) -- (9.5,0) -- (9.5,4.75) -- (7.5,4.75) -- (7.5,5.25) -- (5.5,5.25) --
+     (5.5,5.75) -- (4.5,5.75) -- (4.5, 6.25) -- (3.5,6.25) -- (3.5,11.25) -- (2.5,11.25) --
+     (2.5,11.75) -- (3.5,11.75) -- (3.5,12.25) -- (3.5,12.75) -- (2.5,12.75) -- (2.5,13.25) -- 
+     (1.5,13.25) -- (1.5,13.75) -- (0.5,13.75) -- (0.5,14.25) -- (0,14.25)-- cycle;
+     \foreach \x in {0,...,9}
+     \foreach \y in {0,0.5,...,4.5}
+      \draw (\x,\y) circle(0.05cm);
+     \foreach \x in {0,...,3}
+     \foreach \y in {5,5.5,...,11}
+      \draw (\x,\y) circle(0.05cm);
+      \foreach \x in {0,...,2}
+     \foreach \y in {11.5,12,...,13}
+      \draw (\x,\y) circle(0.05cm);
+      \foreach \poi in {(0,13.5),(0,14),(1,13.5),(3,12.5),(3,12),(4,5),(4,5.5),(4,6),(5,5),(5,5.5),(6,5),(7,5)}
+     \draw \poi circle(0.05cm);
+     \node[%very thick, draw=black, fill=white, rectangle, rounded corners,
+       text width=3em, align=center] at (3.5,3.5)
+       {Liquid};
+     
+ 
+     % ordered BCC
+    
+     \fill[%left
+     color=yellow,% right color=yellow, 
+     opacity=0.5]
+     (9.5,14.25) -- (0.5,14.25) -- (0.5,13.75) -- (1.5,13.75) -- (1.5,13.25) --
+     (2.5,13.25) -- (2.5,12.75) -- (3.5, 12.75) -- (3.5,11.75) -- (2.5,11.75) --
+     (2.5,11.25) -- (3.5,11.25) -- (3.5,10.75) -- 
+     % added
+     (9.5,10.75) -- 
+     %(8.5,10.75) -- (8.5,12.25) --
+     %(7.5,12.25) -- (7.5,11.75) -- (6.5,11.75) -- (6.5,12.25) -- (7.5,12.25) --
+     %(7.5,12.75) -- (5.5, 12.75) -- (5.5,13.25) -- (7.5,13.25) -- (7.5,12.75) -- 
+     (9.5,12.75)  -- cycle;
+     \foreach \x in {4,...,9}
+      \foreach \y in {11,11.5,...,14}
+       \node at (\x,\y) {\pgfuseplotmark{square}};
+      \foreach \poi in {(1,14),(2,14),(3,14),(2,13.5),(3,13.5),(3,13),(3,11.5)}
+      \node at \poi {\pgfuseplotmark{square}}; 
+      
+      \node[%very thick, draw=black, fill=white, rectangle, rounded corners,
+       text width=2em, align=center] at (3.5,6.5+7.25)
+       {BCC};
+      % Hard sphere FCC
+      \fill[%left
+      color=cyan,% right color=cyan,
+      opacity=0.5]
+     (9.5,11.25) -- (3.5,11.25) -- (3.5,6.25) -- (4.5,6.25) -- (4.5,5.75) --
+     (5.5,5.75) -- (5.5,5.25) -- (7.5,5.25) 
+     -- (7.5,4.75) -- (9.5,4.75) 
+     -- cycle; 
+     \foreach \x in {4,...,9}
+      \foreach \y in {6.5,7,...,11}
+       \node at (\x,\y) {\pgfuseplotmark{triangle}};
+      \foreach \poi in {(5,6),(6,6),(7,6),(8,6),(9,6),(6,5.5),(7,5.5),(8,5.5),(9,5.5),(8,5),(9,5)}
+      \node at \poi {\pgfuseplotmark{triangle}};
+     \node[
+       text width=9em, align=center] at (5.5,8.25)
+       {Hard sphere FCC}; 
+    % x axis labels
+    \foreach \i in {0,1,...,9} {
+      \node[below] at (\i,0) {\formatNumber{(\i*0.5+0.5)}{1}};
+    }
+     % y axis labels
+    \foreach \i in {0,.5,...,14} {      
+      \node[left] at (0,\i) {\formatNumber{(\i*0.02+0.25)}{2}};
+    }    
+    % axis names and arrows
+    \draw[->] (0,0) -- (9.8,0) node[below] {$\epsilon$};
+    \draw[->] (0,0) -- (0,14.2) node[above] {$\eta$};
+    % help lines
+    % along x axis
+    \foreach \i in {0,0.5,...,14} {
+      \draw[help lines] (-0.1,\i) -- (9.5,\i);
+    }
+     % along y axis
+    \foreach \i in {1,2,...,9} {
+      \draw[help lines] (\i,14.2) -- (\i,-0.1);
+    }
+%  \end{scope} 
+\end{tikzpicture}

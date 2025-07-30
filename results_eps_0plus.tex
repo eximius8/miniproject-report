@@ -1,0 +1,139 @@
+%\subsection{Event-driven molecular dynamics simulations}
+%\subsection{$\eta$ vs $\lambda$ simulations}
+\subsection{Density vs shell-to-core ratio simulations}\label{secqc1}
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.8\textwidth]{phase1}
+\caption{Packing density vs shell-to-core ratio phase diagram. The shell potential is slowly being increased during the simulation} 
+\label{fig:phase}
+\end{figure}
+
+The simulation with increasing shell potential value revealed the existence of four phases in the studied system (\textbf{Figure} \ref{fig:phase}). As seen from the RDF shapes (\textbf{Figures} \ref{fig:rdf_alpha} and \ref{fig:rdf_beta}) particles in $\alpha$ and $\beta$  phases behave as hard spheres of the shell-size radius. The $\alpha$ phase represents disordered hard-sphere liquid, while the $\beta$ phase has an ordered FCC/HCP %with neighbor distance equal shell radius 
+structure, which can be seen from its bond order diagram on the \textbf{Figure} \ref{fig:rdf_beta}. The increase in the value of shell potential for $\alpha$ and $\beta$ phases results in the %initial growth of potential energy of the system, with its subsequent 
+potential energy / $\epsilon$ decline to zero (\textbf{Figure} \ref{fig:epot_alpha}), which apparently determines the system equilibrium. 
+
+\begin{figure}%[h]
+\centering
+\begin{subfigure}{.24\textwidth}
+  \centering
+  \includegraphics[width=0.98\textwidth]{rdfalpha.tikz}
+  \caption{$\alpha$ phase}
+  \label{fig:rdf_alpha} 
+\end{subfigure}
+\begin{subfigure}{.24\textwidth}
+  \centering
+   \includegraphics[width=0.98\textwidth]{rdfbeta.tikz}
+  \caption{$\beta$ phase}
+  \label{fig:rdf_beta}  
+\end{subfigure}
+\begin{subfigure}{.24\textwidth}
+  \centering
+  \includegraphics[width=0.98\textwidth]{rdfgamma.tikz}
+  \caption{$\gamma$ phase}
+  \label{fig:rdf_gamma} 
+\end{subfigure}
+\begin{subfigure}{.24\textwidth}
+  \centering
+   \includegraphics[width=0.98\textwidth]{rdfdelta.tikz}
+  \caption{$\delta$ phase}
+  \label{fig:rdf_delta}  
+\end{subfigure}
+\caption{Typical radial distribution functions and bond order diagrams (for $\beta$ and $\delta$ phases) for simulations with increasing shell potential}
+\label{fig:rdf1}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.98\textwidth]{upotalph.tikz}
+  \caption{for $\alpha$ and $\beta$ phases}
+  \label{fig:epot_alpha} 
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+   \includegraphics[width=0.98\textwidth]{upotgamm.tikz}
+  \caption{for $\gamma$ and $\delta$ phases}
+  \label{fig:epot_gamma}  
+ \end{subfigure}
+% \begin{subfigure}{.24\textwidth}
+%   \centering
+%    \includegraphics[width=0.98\textwidth]{upot_phi.tikz}
+%   \caption{for $\phi$ phase}
+%   \label{fig:epot_phi}  
+% \end{subfigure}
+% \begin{subfigure}{.24\textwidth}
+%   \centering
+%    \includegraphics[width=0.98\textwidth]{upot_psi.tikz}
+%   \caption{for $\psi$ phase}
+%   \label{fig:epot_psi}  
+% \end{subfigure}
+\caption{Typical curves of the potential energy ($E_{pot}$) over shell potential $\epsilon$ evolution vs time for simulations with increasing shell potential}
+\label{fig:epot_1}
+\end{figure}
+
+High packing density forces particles in $\gamma$ and $\delta$ phases to penetrate into the shells of their neighbors, which is seen in the radial distribution functions behavior (\textbf{Figures} \ref{fig:rdf_gamma} and \ref{fig:rdf_delta}). No order was observed for the $\gamma$ phase region, while particles in the $\delta$ phase were organized into FCC/HCP with neighbor distance equal core radius crystals (\textbf{Figure} \ref{fig:rdf_delta}). The potential energy over shell potential of the system for $\gamma$ and $\delta$ phases  decreased linearly until reaching constant level with the time (\textbf{Figure} \ref{fig:epot_gamma}). %thus repeating the linear growth behavior of the shell potential (\textbf{Figure} \ref{fig:epot_gamma}).
+
+The observed data suggests that particles start to behave as hard bodies and self assemble into close packed structures when packing density reaches the 0.53--0.55 range. The FCC/HCP with neighbor distance equal shell radius structure was observed for packing density 0.53--0.68 considering density was calculated using shell radius. Same tendency to form FCC/HCP with neighbor distance equal core radius structure was observed for $\delta$ phase when the core packing density reached 0.52--0.55 range.
+
+%$\psi$ and $\phi$ phases were only observed for three researched in this study combinations of shell-to-core ratio and shell potential. The phases apparently represent a 5-fold icosahedral QC, which is supported by the bond order diagrams and diffraction patterns shown in the \textbf{Figure} \ref{fig:qc1}. The QC structure was previously reported by Engel et al.\cite{methods} % however the data in this study was too noisy and thus a proper comparison was not performed. 
+% The formed structures are different in terms of the particle interactions. Hence in the $\psi$ phase particles probably interact as hard spheres with core radius, while in the $\phi$ phase particle interact as hard spheres with shell radius, which can be derived from radial distribution functions of the phases, shown in the \textbf{Figures} \ref{fig:rdf_phi} and \ref{fig:rdf_psi}. Identical structure of the phases is supported by similar radial distribution function shapes, besides the packing density considering shell radius for $\phi$ phase equals 0.6, while the $\psi$ phase was found at 0.55-0.6 packing density considering core radius.  However, as shown in the \textbf{Figures} \ref{fig:epot_psi} and \ref{fig:epot_phi} the potential energy over the shell potential time evolution behavior does not appear similar for the $\psi$ and $\phi$ phases. The reason is apparently due to the decline in potential energy for $\psi$ phase is comparable with the potential energy fluctuations in the researched system.
+%Another QC structure was observed only for one studied in this work shell-to-core ratio vs shell potential combination. The bond order diagram and the diffraction pattern of the phase are shown in the \textbf{Figures} \ref{fig:qcshell} and \ref{fig:dqcshell} 
+
+% \begin{figure}
+% \centering
+% \begin{subfigure}{.24\textwidth}
+%   \centering
+%   \includegraphics[width=0.97\textwidth]{rdfS02l145}
+%   \caption{}
+%   \label{fig:rdf_phi} 
+% \end{subfigure}
+% \begin{subfigure}{.24\textwidth}
+%   \centering
+%    \includegraphics[width=0.97\textwidth]{Ds02l145}
+%   \caption{}
+%   \label{fig:QC_shell_dif}  
+% \end{subfigure}
+% \begin{subfigure}{.24\textwidth}
+%   \centering
+%    \includegraphics[width=0.97\textwidth]{rdfS06l13}
+%   \caption{}
+%   \label{fig:rdf_psi}  
+% \end{subfigure}
+% \begin{subfigure}{.24\textwidth}
+%   \centering
+%    \includegraphics[width=0.97\textwidth]{QC_dif1}
+%   \caption{}
+%   \label{fig:QC_core_dif}  
+% \end{subfigure}
+% \caption{The radial distribution functions with bond order diagrams and diffraction patterns of the QC structures obtained at $\lambda=1.45$, $\eta=0.2$ (\subref{fig:rdf_phi} and \subref{fig:QC_shell_dif}) and $\lambda=1.3$, $\eta=0.6$ (\subref{fig:rdf_psi} and \subref{fig:QC_core_dif}) for the density vs shell-to-core ratio simulation}
+% \label{fig:qc1}
+% \end{figure}
+
+
+%The diffraction pattern together with the bond order diagram of the $\beta$ phase are shown in figure \ref{fig:diff_beta}. As seen from the figure particles are organized into hexagonal close packed (HCP) crystal. Such organization occurs when the potential energy of the system approaches zero. The relation between the potential energy evolution and simulation time of $\beta$ phase has the same pattern as $\alpha$ phase (figure \ref{fig:epot_alpha}). The particles in the formed crystal do not penetrate into each others shells and thus the particles act like spheres with $\lambda$ radius.
+
+%The structure of $\delta$ phase has the order of HCP crystal, however the particles in this phase penetrate into shells and thus form non-zero potential energy structures. Typical radial distribution function is presented in the figure \ref{fig:rdf_delta}. The relation between the potential energy of the phase and $\epsilon$ value has a linear trend. The simulation revealed $\delta$ phase to only form at values of density higher than  0.55 which suggests, that there exists only one particle organization above some critical density point.
+
+%No order was found in the diagram $\gamma$ phase region. Probably, this region has the ability to form complex structures, the size of which significantly exceeds the number of particles, used in simulations of this study.
+
+
+
+% \begin{figure}
+%     \centering
+%     \begin{minipage}{0.47\textwidth}
+%         \centering
+%         \includegraphics[width=0.97\textwidth]{upotalph.tikz}
+% \caption{Typical curve of the potential energy evolution vs simulation time for $\alpha$ and $\beta$ phases}
+% \label{fig:epot_alpha}        
+%     \end{minipage}\hfill
+%     \begin{minipage}{0.47\textwidth}
+%         \centering
+%  \includegraphics[width=0.97\textwidth]{upotgamm.tikz}
+% \caption{Typical curve of the potential energy evolution vs simulation time for $\gamma$ and $\delta$ phases}
+% \label{fig:epot_gamma}  
+%     \end{minipage}
+% \end{figure}
+
+

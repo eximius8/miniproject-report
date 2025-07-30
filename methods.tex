@@ -1,0 +1,37 @@
+\section{Simulation and methods}
+\subsection{Simulation setup}
+
+The evolution of particle system was investigated via an event-driven molecular dynamics method. Each simulation was run on an ensemble of 2000 core-shell particles in a box with periodic boundary conditions at each boundary. The average kinetic energy of particles was maintained constant using velocity rescaling. Hence, the expression $k_B\cdot T=1$ was maintained through all simulations.
+The core-shell pair potential between interacting particles was determined by:
+\begin{equation}
+U(r)=\begin{cases} 0, r \geq \lambda R_{core} \\ \epsilon, R_{core}<r<\lambda R_{core} \\ \infty, r\leq R_{core} \end{cases},
+\end{equation}
+here $R_{core}$ -- core radius, $\epsilon$ -- shell potential value, $\lambda$ -- shell to core ratio. 
+The packing density value was calculated only considering hard particle cores via:
+\begin{equation}
+\eta =\frac{4\pi\sum\limits_{i=1}^{2000}R_{core}^3}{3V_{box}},
+\end{equation}
+where $V_{box}$ denotes the simulation box volume.
+
+The system evolution was analyzed in terms of event-driven molecular dynamics time units. The time unit was considered to be equal to 1. The times between events were calculated using conventional event-driven molecular dynamics approach.\cite{edmd} 
+
+Two simulation approaches were implemented. In the first approach for each simulation the shell to core ratio and packing density were kept constant, while the shell potential was slowly being linearly increased (density vs shell-to-core ratio simulation). The simulation was run for each pair in the ranges 1.15--1.6 and 0.2--0.6 for shell-to-core ratio and packing density respectively. The step in both ranges was 0.05. The step at which shell potential was being increased as well as the maximum and the minimum considered values of shell potential were chosen individually for every packing density and shell-to-core ratio combination. 
+At each shell potential value the system was given at least 50 event-driven molecular dynamics time units to equilibrate.  At least 750 event driven molecular dynamics time units were performed in each simulation. 
+
+%Molecular dynamics time was defined in the following way. First 
+
+During another simulation approach all the parameters, including shell potential were kept constant, thus implementing NVT ensemble simulation. Three values of shell-to-core ratio were considered in the current work. For every shell-to-core ratio the simulations were performed in the ranges of 0.5--5 and 0.25--0.55 with incrementing steps of 0.5 and 0.01 for shell potential and packing density respectively. The results were summarized into packing density vs shell-potential phase diagrams for each shell-to-core ratio. %which are given in the section \ref{suppl}. 
+The phases on the diagrams are marked with colors. White regions on diagrams mean the phase composition there was not determined and additional simulations are required. Due to limited time each simulation was run once covering at minimum 50 000 event driven molecular dynamics time units. 
+%Three shell-to-core ratios were chosen to perform  of  
+
+%The constant temperature of the system was maintained using velocity rescaling.
+
+\subsection{Methods}
+
+The present work employed methods described in the study of \citet{methods} Namely, radial distribution function, diffraction patterns and bond order diagrams were used to investigate the order of self-assembled structures. Due to reasons discussed by \citet{engelscience} here I will not distinguish between FCC and HCP phases.
+
+Radial distribution function (RDF) represents the average particle density at some distance from every particle in the simulation box. It helps to identify long range order in the researched system. %The order is represented by fluctuations
+
+The diffraction patterns of the studied system were obtained by Fourier transform calculations of the particle projections along a chosen axis onto a plane. Each such projection represented a narrow Gaussian distribution. The method simulates electron diffraction experimental material investigations.
+
+The bond orientation order diagrams are the distribution of the bond directions of the closest to a particle neighbors. The distributions are projected onto a sphere surface. 
